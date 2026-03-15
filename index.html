@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Snake</title>
+    <link rel="icon" href="/icon-192.png" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen active">
+        <div class="screen-content">
+          <h1 class="title">🐍 SNAKE</h1>
+          <p class="subtitle">Neon Edition</p>
+          <div id="start-highscore" class="highscore-display"></div>
+          <button id="start-btn" class="btn-primary">TAP TO PLAY</button>
+          <p class="hint">Swipe or use D-pad to control</p>
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div id="game-screen" class="screen">
+        <div id="hud">
+          <span id="score-display">0</span>
+          <span id="hud-highscore"></span>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <!-- D-pad -->
+        <div id="dpad">
+          <button class="dpad-btn" id="dpad-up">▲</button>
+          <div class="dpad-row">
+            <button class="dpad-btn" id="dpad-left">◀</button>
+            <div class="dpad-center"></div>
+            <button class="dpad-btn" id="dpad-right">▶</button>
+          </div>
+          <button class="dpad-btn" id="dpad-down">▼</button>
+        </div>
+      </div>
+
+      <!-- Game Over Screen -->
+      <div id="gameover-screen" class="screen">
+        <div class="screen-content">
+          <h2 class="title">GAME OVER</h2>
+          <div class="score-block">
+            <p class="score-label">SCORE</p>
+            <p id="final-score" class="score-value">0</p>
+          </div>
+          <div class="score-block">
+            <p class="score-label">BEST</p>
+            <p id="final-highscore" class="score-value highlight">0</p>
+          </div>
+          <button id="restart-btn" class="btn-primary">PLAY AGAIN</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
